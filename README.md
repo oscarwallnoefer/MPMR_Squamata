@@ -16,6 +16,7 @@ Groups:
 
 ### Steps
 
+0. Genome quick annotation
 1. Orthofinder
 2. IQ-TREE2
 3. ERCnet
