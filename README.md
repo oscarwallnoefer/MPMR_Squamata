@@ -9,12 +9,42 @@ Develop a workflow from Orthofinder to TreePuzzle on the whole proteome.
 Same-size groups (~8 species per group). 
 Groups:
 
-+ Agamidae
-+ Pleurodonta
-+ Serpentes
-+ Others
++ **Acrodonta**
++ + *Pogona_vitticeps*
+  + *Phrynocephalus_forsythii*
+  + *Leudakia_wui*
+  + ...
++ **Pleurodonta**
++ + *Phrynosoma_platyrhinos*
+  + *Sceloporus_undulatus*
+  + *Anolis_sagrei*
+  + *Anolis_carolinensis*
++ **Serpentes**
++ + *Crotalus_adamanteus*
+  + *Candoia_aspera*
+  + *Ahaetulla_prasina*
+  + *Naja_naja*
+  + *Thamnophis_elegans*
+
++ **Others**
++ + *Eublepharis_macularius (Gekkota)*
+  + *Gekko_japonicus (Gekkota)*
+  + *Euleptes_europaea (Gekkota)*
+  + *Heteronotia_binoei (Gekkota)*
+  + *Lerista_edwardsae (Scincomorpha)*
+  + *Tiliqua_scincoides (Scincomorpha)*
+  + *Sphaerodactylus_townsendi (Gekkota)*
+  + *Varanus_komodoensis (Anguiformes)*
+  + *Podarcis_muralis (Lacertidae)*
+  + *Podarcis_raffonei (Lacertidae)*
+  + *Zootoca_vivipara (Lacertidae)*
+  + *Lacerta_agilis (Lacertidae)*
+  
 
 ### Steps
+
+1. Maintain only proteins > 100 aa
+2. Run OrthoFinder
 
 **First Check BUSCO genes**
     
@@ -22,10 +52,6 @@ Groups:
     
     grep "^    5000" *extracted.txt > supported_topologies.txt
 
-0. Genome quick annotation
-1. Orthofinder
-2. IQ-TREE2
-3. ERCnet
 
     
 
