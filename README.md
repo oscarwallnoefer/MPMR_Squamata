@@ -22,6 +22,7 @@ Four groups:
 
 > orthofinder -f [path/to/dir/containing/proteomes/] -y -X -M msa -t [number of threads available]
 
+---
 
 ### Path A
 
