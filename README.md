@@ -9,20 +9,51 @@ Four groups:
 + **Serpentes**
 + **Others** (Gekkota, Scincomorpha, Laterata, Anguiformes)
 
-### Steps
+--- 
 
- **1 -** define dataset (`dataset.xlxs`) and download both proteomes (*protein.faa) and annotation (*genomic.gff) files.
- 
- **2 -** remove putative isoforms with [`primary_transcript.py`](https://github.com/davidemms/OrthoFinder/blob/master/tools/primary_transcript.py) 
- 
- **3 -** edit headers (`>proteincode__Namespecies`)
- 
- **4 -** run OrthoFinder 
+### Preliminary Steps
 
- > orthofinder -f [path/to/dir/containing/proteomes/] -y -X -M msa -t [number of threads available]
+**PS1 -** define dataset (`dataset.xlxs`) and download both proteomes (**protein.faa*) and annotation (**genomic.gff*) files.
  
- Proteins > 100 aa
-2. Run OrthoFinder
+**PS2 -** remove putative isoforms with [`primary_transcript.py`](https://github.com/davidemms/OrthoFinder/blob/master/tools/primary_transcript.py) 
+ 
+**PS3 -** edit headers (`>proteincode__Namespecies`)
+ 
+**PS4 -** run OrthoFinder 
+
+> orthofinder -f [path/to/dir/containing/proteomes/] -y -X -M msa -t [number of threads available]
+
+--- 
+
+### Path A
+
+**Path A** concerns analyses about topological tests. 
++ **PA1 -**
++ + densitree
+  +  Robinson-Foulds + Multidimensional Scaling
+
++ **PA2 -**
++ + Gene Concordance Factors (gCFs; IQTREE2)
+
++ **PA3 -**
++ + Likelihood Mapping Analysis (LMA; IQTREE2)
+
+---
+
+### Path B
+
+**Path B** concerns analyses about co-variations among proteins. 
++ **PB1 -**
++ + Phylogenomic analyses
++ + Gene-tree/Species-tree reconciliation
+
++ **PB2 -**
++ + ERC analyses
+  + Network analyses	
+
+---
+
+Old analysis:
 
 **First Check BUSCO genes**
     
