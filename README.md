@@ -28,27 +28,27 @@ Four groups:
 ### Path A
 
 **Path A** concerns analyses about topological tests. 
-+ **PA1 -**
-+ + densitree
++ **PA1**
+  + densitree
   +  Robinson-Foulds + Multidimensional Scaling
 
-+ **PA2 -**
-+ + Gene Concordance Factors (gCFs; IQTREE2)
++ **PA2**
+  + Gene Concordance Factors (gCFs; IQTREE2)
 
-+ **PA3 -**
-+ + Likelihood Mapping Analysis (LMA; IQTREE2)
++ **PA3**
+  + Likelihood Mapping Analysis (LMA; IQTREE2)
 
 ---
 
 ### Path B
 
 **Path B** concerns analyses about co-variations among proteins. 
-+ **PB1 -**
-+ + Phylogenomic analyses
-+ + Gene-tree/Species-tree reconciliation
++ **PB1**
+  + Phylogenomic analyses
+  + Gene-tree/Species-tree reconciliation
 
-+ **PB2 -**
-+ + ERC analyses
++ **PB2**
+  + ERC analyses
   + Network analyses	
 
 ---
