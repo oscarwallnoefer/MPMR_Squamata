@@ -16,7 +16,7 @@ Four groups:
  **3 -** edit headers (`>proteincode__Namespecies`)
  **4 -** run OrthoFinder 
 
-> orthofinder -f <path/to/dir/containing/proteomes/> -y -X -M msa -t <number of threads available on computing system>
+ orthofinder -f [path/to/dir/containing/proteomes/] -y -X -M msa -t [number of threads available]
  
  Proteins > 100 aa
 2. Run OrthoFinder
