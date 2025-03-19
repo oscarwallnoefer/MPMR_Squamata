@@ -27,6 +27,8 @@ Four groups:
 
 ### Path A
 
+Student: `Nicolò Gabriele`
+
 **Path A** concerns analyses about topological tests. 
 + **PA1**
   + densitree
@@ -41,6 +43,8 @@ Four groups:
 ---
 
 ### Path B
+
+Student: `Giorgia Galletti`
 
 **Path B** concerns analyses about co-variations among proteins. 
 + **PB1**
