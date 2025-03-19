@@ -20,7 +20,7 @@ Four groups:
  
 **PS4 -** run OrthoFinder 
 
-   orthofinder -f [path/to/dir/containing/proteomes/] -y -X -M msa -t [number of threads available]
+      orthofinder -f [path/to/dir/containing/proteomes/] -y -X -M msa -t [number of threads available]
 
 ---
 
