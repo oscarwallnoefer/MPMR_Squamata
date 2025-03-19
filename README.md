@@ -39,7 +39,7 @@ Groups:
 
 ### Steps
 
-1. Maintain only proteins > 100 aa
+1. Proteins > 100 aa
 2. Run OrthoFinder
 
 **First Check BUSCO genes**
