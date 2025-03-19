@@ -2,44 +2,23 @@
 
 ### Dataset
 
-Same-size groups (~8 species per group). 
-Groups:
+Four groups:
 
 + **Acrodonta**
-+ + *Pogona_vitticeps*
-  + *Phrynocephalus_forsythii*
-  + *Leudakia_wui*
-  + ...
 + **Pleurodonta**
-+ + *Phrynosoma_platyrhinos*
-  + *Sceloporus_undulatus*
-  + *Anolis_sagrei*
-  + *Anolis_carolinensis*
 + **Serpentes**
-+ + *Crotalus_adamanteus*
-  + *Candoia_aspera*
-  + *Ahaetulla_prasina*
-  + *Naja_naja*
-  + *Thamnophis_elegans*
-
-+ **Others**
-+ + *Eublepharis_macularius (Gekkota)*
-  + *Gekko_japonicus (Gekkota)*
-  + *Euleptes_europaea (Gekkota)*
-  + *Heteronotia_binoei (Gekkota)*
-  + *Lerista_edwardsae (Scincomorpha)*
-  + *Tiliqua_scincoides (Scincomorpha)*
-  + *Sphaerodactylus_townsendi (Gekkota)*
-  + *Varanus_komodoensis (Anguiformes)*
-  + *Podarcis_muralis (Lacertidae)*
-  + *Podarcis_raffonei (Lacertidae)*
-  + *Zootoca_vivipara (Lacertidae)*
-  + *Lacerta_agilis (Lacertidae)*
-  
++ **Others** (Gekkota, Scincomorpha, Laterata, Anguiformes)
 
 ### Steps
 
-1. Proteins > 100 aa
+ **1 -** define dataset (`dataset.xlxs`) and download both proteomes (*protein.faa) and annotation (*genomic.gff) files.
+ **2 -** remove putative isoforms with [`primary_transcript.py`](https://github.com/davidemms/OrthoFinder/blob/master/tools/primary_transcript.py) 
+ **3 -** edit headers (`>proteincode__Namespecies`)
+ **4 -** run OrthoFinder 
+
+> orthofinder -f <path/to/dir/containing/proteomes/> -y -X -M msa -t <number of threads available on computing system>
+ 
+ Proteins > 100 aa
 2. Run OrthoFinder
 
 **First Check BUSCO genes**
