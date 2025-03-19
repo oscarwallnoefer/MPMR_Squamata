@@ -9,7 +9,6 @@ Four groups:
 + **Serpentes**
 + **Others** (Gekkota, Scincomorpha, Laterata, Anguiformes)
 
---- 
 
 ### Preliminary Steps
 
@@ -23,7 +22,6 @@ Four groups:
 
 > orthofinder -f [path/to/dir/containing/proteomes/] -y -X -M msa -t [number of threads available]
 
---- 
 
 ### Path A
 
@@ -40,7 +38,6 @@ Student: `Nicolò Gabriele`
 + **PA3**
   + Likelihood Mapping Analysis (LMA; IQTREE2)
 
----
 
 ### Path B
 
