@@ -19,7 +19,7 @@ Four groups:
  
  **4 -** run OrthoFinder 
 
-   orthofinder -f [path/to/dir/containing/proteomes/] -y -X -M msa -t [number of threads available]
+ > orthofinder -f [path/to/dir/containing/proteomes/] -y -X -M msa -t [number of threads available]
  
  Proteins > 100 aa
 2. Run OrthoFinder
