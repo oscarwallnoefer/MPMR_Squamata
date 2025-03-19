@@ -12,11 +12,14 @@ Four groups:
 ### Steps
 
  **1 -** define dataset (`dataset.xlxs`) and download both proteomes (*protein.faa) and annotation (*genomic.gff) files.
+ 
  **2 -** remove putative isoforms with [`primary_transcript.py`](https://github.com/davidemms/OrthoFinder/blob/master/tools/primary_transcript.py) 
+ 
  **3 -** edit headers (`>proteincode__Namespecies`)
+ 
  **4 -** run OrthoFinder 
 
- orthofinder -f [path/to/dir/containing/proteomes/] -y -X -M msa -t [number of threads available]
+   orthofinder -f [path/to/dir/containing/proteomes/] -y -X -M msa -t [number of threads available]
  
  Proteins > 100 aa
 2. Run OrthoFinder
