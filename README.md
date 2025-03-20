@@ -24,7 +24,7 @@ Four groups:
 
 ---
 
-### Path A
+### --- Path A
 
 Student: `Nicolò Gabriele`
 
@@ -40,7 +40,7 @@ Student: `Nicolò Gabriele`
   + Likelihood Mapping Analysis (LMA; IQTREE2)
 
 
-### Path B
+### --- Path B
 
 Student: `Giorgia Galletti`
 
