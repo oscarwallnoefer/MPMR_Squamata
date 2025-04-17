@@ -16,7 +16,7 @@ Four groups:
  
 **PS2 -** remove putative isoforms with [`primary_transcript.py`](https://github.com/davidemms/OrthoFinder/blob/master/tools/primary_transcript.py) 
  
-**PS3 -** edit headers (`>proteincode__Namespecies`)
+**PS3 -** edit headers (`>species__protein`)
  
 **PS4 -** run OrthoFinder 
 
@@ -28,7 +28,7 @@ Four groups:
 
 Student: `Nicolò Gabriele`
 
-**Path A** concerns analyses about topological tests. 
+**Path A** Topological tests. 
 + **PA1**
   + densitree
   +  Robinson-Foulds + Multidimensional Scaling
@@ -44,7 +44,7 @@ Student: `Nicolò Gabriele`
 
 Student: `Giorgia Galletti`
 
-**Path B** concerns analyses about co-variations among proteins. 
+**Path B** Co-variations among proteins. 
 + **PB1**
   + Phylogenomic analyses
   + Gene-tree/Species-tree reconciliation
