@@ -30,7 +30,7 @@ Student: `Nicolò Gabriele`
 
 **Path A** Topological tests. 
 + **PA1**
-  + densitree
+  + gene trees con IQTREE2
   +  Robinson-Foulds + Multidimensional Scaling
 
 + **PA2**
