@@ -30,14 +30,19 @@ Student: `Nicolò Gabriele`
 
 **Path A** Topological tests. 
 + **PA1**
-  + gene trees con IQTREE2
-  +  Robinson-Foulds + Multidimensional Scaling
+  + gene trees (IQTREE2, -m MFP, -B 1000)
+  + + Filters:
+    +  a. < 10% gaps in gene alignments
+    +  b. > 100 aa gene length
+    +  c. pruning species with branch length > 20 standard deviations
+    +  d. removing genes if there is not monophyletic origin in each group (Acrodonta, Pleurodonta or Serpentes).
+    +  e. removing genes if there is not > 80% bootstrap support for the deep node of Acrodonta, Pleurodonta and Serpentes.  
+  + Robinson-Foulds + Multidimensional Scaling
 
 + **PA2**
-  + Gene Concordance Factors (gCFs; IQTREE2)
-
-+ **PA3**
   + Likelihood Mapping Analysis (LMA; IQTREE2)
+    + LMA performed for all the XX single-gene alignments.
+  + Coalescence 
 
 
 ### --- Path B
@@ -51,7 +56,12 @@ Student: `Giorgia Galletti`
 
 + **PB2**
   + ERC analyses
-  + Network analyses	
+  + Network analyses
+
++ **PB3**
+  + InterProScan -goterms
+  + g:profiler
+
 
 ---
 
