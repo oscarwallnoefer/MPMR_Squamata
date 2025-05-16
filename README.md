@@ -34,7 +34,7 @@ Student: `Nicolò Gabriele`
   + + Filters:
     +  a. < 10% gaps in gene alignments
     +  b. > 100 aa gene length
-    +  c. pruning species with branch length > 20 standard deviations
+    +  c. pruning species with branch length equal to or 20 times the median length of all branches.
     +  d. removing genes if there is not monophyletic origin in each group (Acrodonta, Pleurodonta or Serpentes).
     +  e. removing genes if there is not > 80% bootstrap support for the deep node of Acrodonta, Pleurodonta and Serpentes.  
   + Robinson-Foulds + Multidimensional Scaling
