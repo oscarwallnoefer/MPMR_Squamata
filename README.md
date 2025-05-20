@@ -4,21 +4,24 @@
 
 Four groups:
 
-+ **Acrodonta**
-+ **Pleurodonta**
-+ **Serpentes**
-+ **Others** (Gekkota, Scincomorpha, Laterata, Anguiformes)
++ **Acrodonta** - 5 species
++ **Pleurodonta** - 5 species
++ **Serpentes** - 13 species
++ **Others** (Gekkota, Scincomorpha, Laterata, Anguiformes) - 11 species 
 
+Outgroup: Sphenodon punctatus
 
 ### Preliminary Steps
 
-**PS1 -** define dataset (`dataset.xlxs`) and download both proteomes (**protein.faa*) and annotation (**genomic.gff*) files.
+**PS1 -** define dataset (`dataset.xlxs`) and download proteomes (**protein.faa*) files
  
 **PS2 -** remove putative isoforms with [`primary_transcript.py`](https://github.com/davidemms/OrthoFinder/blob/master/tools/primary_transcript.py) 
  
 **PS3 -** edit headers (`>species__protein`)
+
+**PS4 -** identify mitochondrial genes and add sequences to proteomes when lacking 
  
-**PS4 -** run OrthoFinder 
+**PS5 -** run OrthoFinder 
 
       orthofinder -f [path/to/dir/containing/proteomes/] -y -X -M msa -t [number of threads available]
 
@@ -26,7 +29,7 @@ Four groups:
 
 ### --- Path A
 
-Student: `Nicolò Gabriele`
+BSc Student: `Nicolò Gabriele`
 
 **Path A** Topological tests. 
 + **PA1**
@@ -47,31 +50,26 @@ Student: `Nicolò Gabriele`
 
 ### --- Path B
 
-Student: `Giorgia Galletti`
+BSc Student: `Giorgia Galletti`
 
 **Path B** Co-variations among proteins. 
+
 + **PB1**
-  + Phylogenomic analyses
-  + Gene-tree/Species-tree reconciliation
+  + ERC and network analyses
 
 + **PB2**
-  + ERC analyses
-  + Network analyses
-
-+ **PB3**
   + InterProScan -goterms
   + g:profiler
 
 --- 
-Serpentes mtDNA extractions
+
+### Serpentes mtDNA extractions
 
     miniprot --gff SpeciesX_Genome.fasta SpeciesY_mtDNA.faa > SpeciesX_aln.gff
   
     sed -E 's/Target=([^ ;]+) [^;]*/Name=\1;Target=\1/' SpeciesX_aln.gff > SpeciesX_named.gff
   
     agat_sp_extract_sequences.pl -g SpeciesX_named.gff -f SpeciesX_Genome.fasta -p --table 2 -o SpeciesX_mt.fasta
-
-
 
 
 ---
