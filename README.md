@@ -66,7 +66,9 @@ Student: `Giorgia Galletti`
 Serpentes mtDNA extractions
 
   miniprot --gff SpeciesX_Genome.fasta SpeciesY_mtDNA.faa > SpeciesX_aln.gff
+  
   sed -E 's/Target=([^ ;]+) [^;]*/Name=\1;Target=\1/' SpeciesX_aln.gff > SpeciesX_named.gff
+  
   agat_sp_extract_sequences.pl -g SpeciesX_named.gff -f SpeciesX_Genome.fasta -p --table 2 -o SpeciesX_mt.fasta
 
 
