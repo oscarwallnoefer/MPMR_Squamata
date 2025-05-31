@@ -1,5 +1,7 @@
 # Squamata Metabolomics
 
+### Background
+
 This project aims to investigate about how positively selected mitochondrial OXPHOS impact the proteomic network.
  
 For this purpose, we selected the clade of Serpentes (Order: Squamata), that shows adaptive amino acidic changes in core mtOXPHOS subunits.
@@ -18,8 +20,6 @@ The project is splitted into two blocks:
 2. **path B** detecting proteins that show signals of convergence between agamids and snakes towards the OXPHOS-biased topology.
 
 ### Dataset
-
-Four groups:
 
 + **Acrodonta** - 5 species
 + **Pleurodonta** - 5 species
@@ -101,14 +101,4 @@ Script to create the supports table:
 - [] Robinson-Foulds distances
 - [] Coalescent-based tree
 - [] Mitochondrial tree
-
----
- 
-### Serpentes mtDNA extractions
-
-    miniprot --gff SpeciesX_Genome.fasta SpeciesY_mtDNA.faa > SpeciesX_aln.gff
-  
-    sed -E 's/Target=([^ ;]+) [^;]*/Name=\1;Target=\1/' SpeciesX_aln.gff > SpeciesX_named.gff
-  
-    agat_sp_extract_sequences.pl -g SpeciesX_named.gff -f SpeciesX_Genome.fasta -p --table 2 -o SpeciesX_mt.fasta
 
