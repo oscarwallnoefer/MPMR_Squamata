@@ -28,6 +28,8 @@ Four groups:
 
 Outgroup: _Sphenodon punctatus_ (Order: Rhyncocephalia)
 
+---
+
 ### Preliminary Steps - common to both path A and B
 
 - [x] Define dataset (`dataset.xlxs`) and download proteomes (*protein.faa*) files
@@ -37,6 +39,8 @@ Outgroup: _Sphenodon punctatus_ (Order: Rhyncocephalia)
 - [x] Run OrthoFinder 
 
       orthofinder -f [path/to/dir/containing/proteomes/] -y -X -M msa -t [number of threads available]
+
+---
 
 ### Path A - snakes erc
 
@@ -66,6 +70,8 @@ Network analyses were inspected with Cytoscape.
 We did it for both a relaxed network (./Network_analyses.py -p 0.05 -r 0.5) and a more stringent search (-p 0.001 and -r 0.7).
 - [] GO terms were analsysed with g:profiler (** pipeline mirko **)
 
+---
+
 ### Path B - disentangling OXPHOS-biased phylogenetic signal
 
 BSc Student: `Nicolò Gabriele`
@@ -84,16 +90,17 @@ PhyloPyPruner filters:
 - [x] Likelihood Mapping Analysis
 
 	iqtree2 -s gene.fa -m TEST -lmap 5000 -n 0 -lmclust species_clusters.nex
-	# species_clusters.nex comprised four clusters: Acrodonta, Pleurodonta, Serpentes and Others (the remaining species)
 
-	# script to create the supports table.
+NB: species_clusters.nex comprised four clusters: Acrodonta, Pleurodonta, Serpentes and Others (the remaining species).
+
+Script to create the supports table:
+
 	for file in *.iqtree; do sed -n '/LIKELIHOOD MAPPING STATISTICS/,$ { /Quartet support of areas 1-7 (mainly for clustered analysis):/,$!p }' "$file" > "$(bas>
     	grep "^    5000" *extracted.txt > supported_topologies.txt 
 
 - [] Robinson-Foulds distances
 - [] Coalescent-based tree
 - [] Mitochondrial tree
-
 
 ---
  
