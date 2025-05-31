@@ -13,9 +13,9 @@ Using a mirror tree approach, we demonstrated that also nucOXPHOS genes show aga
 Thus, we aim to demonstrate that a larger set of nuclear proteins carry within themself the same phyogenetic signal. 
 
 The project is splitted into two blocks: 
-1. *path A* detecting proteins highly dependent from mitochondrial genes using whole-proteome evolutionary rates covariation (note: we assume that the starting point of selection is the mitogenome, but this assumption
+1. **path A** detecting proteins highly dependent from mitochondrial genes using whole-proteome evolutionary rates covariation (note: we assume that the starting point of selection is the mitogenome, but this assumption
  could be debated).
-2. *path B* detecting proteins that show signals of convergence between agamids and snakes towards the OXPHOS-biased topology.
+2. **path B** detecting proteins that show signals of convergence between agamids and snakes towards the OXPHOS-biased topology.
 
 ### Dataset
 
@@ -28,7 +28,7 @@ Four groups:
 
 Outgroup: _Sphenodon punctatus_ (Order: Rhyncocephalia)
 
-## Preliminary Steps - common to both path A and B
+### Preliminary Steps - common to both path A and B
 
 - [x] Define dataset (`dataset.xlxs`) and download proteomes (*protein.faa*) files
 - [x] Remove putative isoforms with [`primary_transcript.py`](https://github.com/davidemms/OrthoFinder/blob/master/tools/primary_transcript.py). 
@@ -45,12 +45,19 @@ BSc Student: `Giorgia Galletti`
 *Evolutionary Rates Covariation* as in [`ERCnet`](https://github.com/EvanForsythe/ERCnet/tree/main)).
 
 - [x] Phylogenomic analyses
+
 	./Phylogenomics.py -j p1r7_julia -r 7 -p 1 -l 100 -m 32 -P 0.9 -b 85 -T -o <path/to/orthofinder/results/>
+
 - [x] Gene-tree/Species-tree reconciliation 
+
 	./GTST_reconciliation.py -j p1r7_julia
+
 - [x] ERC analysis
+
 	./ERC_analyses.py -j p1r7_julia -m 32 -b R2T -s Nnaj
+
 - [x] Network analysis
+
 	./Network_analyses.py -j p1r7_julia -p 0.05 -r 0.5 -c pearson -m R2T -S -y fg -s Nnaj -F -L 
 
 Network analyses were inspected with Cytoscape. 
