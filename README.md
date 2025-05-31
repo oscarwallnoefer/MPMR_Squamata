@@ -50,19 +50,19 @@ BSc Student: `Giorgia Galletti`
 
 - [x] Phylogenomic analyses
 
-	./Phylogenomics.py -j p1r7_julia -r 7 -p 1 -l 100 -m 32 -P 0.9 -b 85 -T -o <path/to/orthofinder/results/>
+		./Phylogenomics.py -j p1r7_julia -r 7 -p 1 -l 100 -m 32 -P 0.9 -b 85 -T -o <path/to/orthofinder/results/>
 
 - [x] Gene-tree/Species-tree reconciliation 
-
-	./GTST_reconciliation.py -j p1r7_julia
+	
+		./GTST_reconciliation.py -j p1r7_julia
 
 - [x] ERC analysis
 
-	./ERC_analyses.py -j p1r7_julia -m 32 -b R2T -s Nnaj
+		./ERC_analyses.py -j p1r7_julia -m 32 -b R2T -s Nnaj
 
 - [x] Network analysis
 
-	./Network_analyses.py -j p1r7_julia -p 0.05 -r 0.5 -c pearson -m R2T -S -y fg -s Nnaj -F -L 
+		./Network_analyses.py -j p1r7_julia -p 0.05 -r 0.5 -c pearson -m R2T -S -y fg -s Nnaj -F -L 
 
 Network analyses were inspected with Cytoscape. 
 
@@ -89,14 +89,14 @@ PhyloPyPruner filters:
 
 - [x] Likelihood Mapping Analysis
 
-	iqtree2 -s gene.fa -m TEST -lmap 5000 -n 0 -lmclust species_clusters.nex
+		iqtree2 -s gene.fa -m TEST -lmap 5000 -n 0 -lmclust species_clusters.nex
 
 NB: species_clusters.nex comprised four clusters: Acrodonta, Pleurodonta, Serpentes and Others (the remaining species).
 
 Script to create the supports table:
 
-	for file in *.iqtree; do sed -n '/LIKELIHOOD MAPPING STATISTICS/,$ { /Quartet support of areas 1-7 (mainly for clustered analysis):/,$!p }' "$file" > "$(bas>
-    	grep "^    5000" *extracted.txt > supported_topologies.txt 
+		for file in *.iqtree; do sed -n '/LIKELIHOOD MAPPING STATISTICS/,$ { /Quartet support of areas 1-7 (mainly for clustered analysis):/,$!p }' "$file" > "$(bas>
+    		grep "^    5000" *extracted.txt > supported_topologies.txt 
 
 - [] Robinson-Foulds distances
 - [] Coalescent-based tree
