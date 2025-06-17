@@ -84,7 +84,6 @@ PhyloPyPruner filters:
 +  a. < 10% gaps in gene alignments
 +  b. > 100 aa gene length
 +  c. pruning species with branch length equal to or 20 times the median length of all branches.
-+  d. removing genes if there is not monophyletic origin in each group (Acrodonta, Pleurodonta or Serpentes).
 +  e. removing genes if there is not > 80% bootstrap support for the deep node of Acrodonta, Pleurodonta and Serpentes.  
 
 - [x] Likelihood Mapping Analysis
@@ -95,8 +94,9 @@ NB: species_clusters.nex comprised four clusters: Acrodonta, Pleurodonta, Serpen
 
 Script to create the supports table:
 
-		for file in *.iqtree; do sed -n '/LIKELIHOOD MAPPING STATISTICS/,$ { /Quartet support of areas 1-7 (mainly for clustered analysis):/,$!p }' "$file" > "$(bas>
-    		grep "^    5000" *extracted.txt > supported_topologies.txt 
+		for file in *.iqtree; do sed -n '/LIKELIHOOD MAPPING STATISTICS/,$ { /Quartet support of areas 1-7 (mainly for clustered analysis):/q; p }' "$file" > "${file%.iqtree}_extracted.txt"; done
+		grep "^    5000" *_extracted.txt > supported_topologies.txt
+
 
 - [] Robinson-Foulds distances
 - [] Coalescent-based tree
