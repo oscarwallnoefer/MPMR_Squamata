@@ -50,8 +50,6 @@ BSc Student: `Giorgia Galletti`
 *Evolutionary Rates Covariation* as in [`ERCnet`](https://github.com/EvanForsythe/ERCnet/tree/main)).
 
 - [x] Phylogenomic analyses
-<<<<<<< HEAD
-=======
 
 		./Phylogenomics.py -j p2r8_julia -r 8 -p 2 -l 99 -m 32 -P 0.9 -b 85 -T -o <path/to/orthofinder/results/>
 
