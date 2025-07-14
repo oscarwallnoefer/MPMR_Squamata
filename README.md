@@ -43,11 +43,7 @@ Outgroup: _Sphenodon punctatus_ (Order: Rhyncocephalia)
 
 ---
 
-<<<<<<< HEAD
-### Path A - snakes erc
-=======
 ### Evolutionary Rate Covariations - SNAKES
->>>>>>> 7d48d33 (Aggiorna README.md)
 
 BSc Student: `Giorgia Galletti`
 
@@ -72,40 +68,16 @@ BSc Student: `Giorgia Galletti`
 		./Network_analyses.py -j p2r8_julia -p 0.001 -r 0.8 -c pearson -m R2T -S -y fg -s Nnaj -F -L 
 
 Networks were inspected with custom made python3 scripts. 
->>>>>>> 7d48d33 (Aggiorna README.md)
 
-		./Phylogenomics.py -j p1r7_julia -r 7 -p 1 -l 100 -m 32 -P 0.9 -b 85 -T -o <path/to/orthofinder/results/>
-
-<<<<<<< HEAD
-- [x] Gene-tree/Species-tree reconciliation 
-	
-		./GTST_reconciliation.py -j p1r7_julia
-
-- [x] ERC analysis
-
-		./ERC_analyses.py -j p1r7_julia -m 32 -b R2T -s Nnaj
-
-- [x] Network analysis
-
-		./Network_analyses.py -j p1r7_julia -p 0.05 -r 0.5 -c pearson -m R2T -S -y fg -s Nnaj -F -L 
-
-Network analyses were inspected with Cytoscape. 
-
-=======
->>>>>>> 7d48d33 (Aggiorna README.md)
-- [] The closest proteins of mitochondrial genes were extracted from the network and submitted to InterProScan, specifying GO terms seach.
+- [x] The closest proteins of mitochondrial genes were extracted from the network and submitted to InterProScan, specifying GO terms seach.
 We did it for both a relaxed network (./Network_analyses.py -p 0.05 -r 0.5) and a more stringent search (-p 0.001 and -r 0.7).
-- [] GO terms were analsysed with g:profiler (** pipeline mirko **)
+- [x] GO terms were analsysed with g:profiler (** pipeline mirko **)
 
 ---
 
-<<<<<<< HEAD
-### Path B - disentangling OXPHOS-biased phylogenetic signal
-=======
 ### MitoNuclear Discordances - disentangling OXPHOS-biased phylogenetic signal in SQUAMATA
 
 BSc Student: `Nicolò Gabriele`
-
 
 ### Dataset construction
 
@@ -188,34 +160,4 @@ towards the mitochondrial topology. This set of genes constituted the foreground
                 path/to/interproscan.sh -cpu 48 -goterms -pa -i [00_input_interproscan.sh] -appl PANTHER --output-dir [01_output_interproscan]
 
 - [x] We used a custom made R script written by Mirko Martini (@mirkmart) to infer TopGO enrichment, followed by visualization 
-on ReViGO.
->>>>>>> 7d48d33 (Aggiorna README.md)
-
-BSc Student: `Nicolò Gabriele`
-
-- [x] From the Orthofinder output, we selected orthogroups with no more than three paralogs per species and at least 33 species out of 35.
-- [x] We performed gene-tree inferences using IQTREE2 (-m MFP, -B 1000)
-- [x] In order to identify the correct paralog, we pruned gene trees with [PhyloPyPruner](https://github.com/fethalen/phylopypruner).
-
-PhyloPyPruner filters:
-+  a. < 10% gaps in gene alignments
-+  b. > 100 aa gene length
-+  c. pruning species with branch length equal to or 20 times the median length of all branches.
-+  e. removing genes if there is not > 80% bootstrap support for the deep node of Acrodonta, Pleurodonta and Serpentes.  
-
-- [x] Likelihood Mapping Analysis
-
-		iqtree2 -s gene.fa -m TEST -lmap 5000 -n 0 -lmclust species_clusters.nex
-
-NB: species_clusters.nex comprised four clusters: Acrodonta, Pleurodonta, Serpentes and Others (the remaining species).
-
-Script to create the supports table:
-
-		for file in *.iqtree; do sed -n '/LIKELIHOOD MAPPING STATISTICS/,$ { /Quartet support of areas 1-7 (mainly for clustered analysis):/q; p }' "$file" > "${file%.iqtree}_extracted.txt"; done
-		grep "^    5000" *_extracted.txt > supported_topologies.txt
-
-
-- [] Robinson-Foulds distances
-- [] Coalescent-based tree
-- [] Mitochondrial tree
-
+on ReViGO. 
