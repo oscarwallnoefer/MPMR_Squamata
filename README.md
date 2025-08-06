@@ -1,4 +1,4 @@
-# Squamata Proteome 
+# Squamata Mitonuclear Coevolution 
 
 ### Background
 This project aims to explore the impact of mitonuclear coevolution across entire proteomes. In brief, it is possible to predict the interaction and/or a shared evolutionary history between two proteins calculating the correlation between their evolutionary rates. The higher the Pearson’s correlation coefficient, the stronger the presumed coevolution. Applying this concept to the entire proteome of a species dataset allows the identification of nuclear proteins that coevolve with mitochondrial ones.
