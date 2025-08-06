@@ -1,18 +1,15 @@
-# Squamata Metabolomics
+# Squamata Proteome 
 
 ### Background
+This project aims to explore the impact of mitonuclear coevolution across entire proteomes. In brief, it is possible to predict the interaction and/or a shared evolutionary history between two proteins calculating the correlation between their evolutionary rates. The higher the Pearson’s correlation coefficient, the stronger the presumed coevolution. Applying this concept to the entire proteome of a species dataset allows the identification of nuclear proteins that coevolve with mitochondrial ones.
 
-This project aims to investigate about how positively selected mitochondrial OXPHOS impact the proteomic network.
- 
 For this purpose, we selected the clade of Serpentes (Order: Squamata), that shows adaptive amino acidic changes in core mtOXPHOS subunits.
 Literature posits these changes to new metabolic necessities. 
 Thus, we expected a highly impacted proteomic network and a particularly strong covariation between mithocondrial proteins and other metabolic pathways. 
 
-Furthermore, snakes shows a suggestive case of convergent evolution among OXPHOS proteins (especially mtOXPHOS) with agamids (Family: Agamidae).
-Likely due to an ancient episode of metabolic convergence, the signal is so radicated that agamids are consistently placed as the sister taxon of snakes
- when using mitochondrial markers (instead of being closely related to Pleurodonta). 
-Using a mirror tree approach, we demonstrated that also nucOXPHOS genes show agamids-snakes sister relationship.
-Thus, we aim to demonstrate that a larger set of nuclear proteins carry within themself the same phyogenetic signal. 
+Mitonuclear coevolution may also significantly affect phylogenetic inference. In fact, coevolving genes often support the same phylogenetic topology. In some cases, mitochondrial markers that support a topology that contradict that inferred from nuclear genes (a phenomenon called mitonuclear phylogenetic discordance). In such instances, subsets of nuclear genes that interact closely with mitochondrial proteins or, or have experienced similar selective pressures, may adopt the same biased topology as the mitochondrial one.
+To investigate the extent of this phenomenon, we used the same species dataset of squamate species. In fact, the Squamata order is characterized by a deep mitonuclear phylogenetic discordance: mitochondrial markers sustain a close sister relationship between the Agamidae and snakes, whereas morphology and nuclear genes support Agamidae+Pleurodonta. This discordance has been attributed to convergent evolution and selective pressures on the OXPHOS pathway in both agamids and snakes. Indeed, some nuclear OXPHOS genes have already been shown to support the mitochondrial topology. While some researchers suggest an ancient shared selective pressure on the oxidative phosphorylation pathway in both lineages, this remains speculative.
+This unique case provided an opportunity to test which other (non-OXPHOS) nuclear genes might support the mitochondrial-biased topology. To avoid bias from a priori gene selection, we analyzed the entire nuclear proteome and performed topological tests on thousands of proteins. 
 
 The project is splitted into two blocks: 
 
