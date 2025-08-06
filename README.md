@@ -88,6 +88,7 @@ PhyloPyPruner filters:
  - [x] Discard output alignments with fewer than 20 sequences
 
 Command:
+
 		phylopypruner --threads 20 --no-supermatrix --dir /home/PERSONALE/oscar.wallnoefer2/05_Squamata_2.0/01_Input_Orthofinder_All/01_genetrees/03_phylopypruner/ --min-len 100 --trim-lb 5 --mask pdist --outgroup Spun --prune LS --min-taxa 20 --min-gene-occupancy 60
 
 ### Phylogenetic Inference: Mitochondrial Tree vs Nuclear Tree
