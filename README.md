@@ -81,11 +81,11 @@ BSc Student: `Nicolò Gabriele`
 - [x] In order to identify the correct paralog, we pruned gene trees with [PhyloPyPruner](https://github.com/fethalen/phylopypruner).
 
 PhyloPyPruner filters:
-  [x] Remove sequences shorter than 100 bases
-  [x] Remove branches longer than 5 standard deviations of all branches
-  [x] Collapse branches with less support than 60% into polytomies
-  [x] Mask monophylies using the pdist method
-  [x] Discard output alignments with fewer than 20 sequences
+ - [x] Remove sequences shorter than 100 bases
+ - [x] Remove branches longer than 5 standard deviations of all branches
+ - [x] Collapse branches with less support than 60% into polytomies
+ - [x] Mask monophylies using the pdist method
+ - [x] Discard output alignments with fewer than 20 sequences
 
 Command:
 		phylopypruner --threads 20 --no-supermatrix --dir /home/PERSONALE/oscar.wallnoefer2/05_Squamata_2.0/01_Input_Orthofinder_All/01_genetrees/03_phylopypruner/ --min-len 100 --trim-lb 5 --mask pdist --outgroup Spun --prune LS --min-taxa 20 --min-gene-occupancy 60
